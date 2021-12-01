@@ -27,7 +27,7 @@ export class PokeTableComponent implements OnInit {
 
   getPokemons() {
     let pokemonData;
-    
+    //i selects all the pokemon data that we will collect
     for (let i = 1; i <= 251; i++) {
       this.pokeService.getPokemons(i).subscribe(
         res => {
