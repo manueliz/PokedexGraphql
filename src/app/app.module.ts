@@ -8,12 +8,18 @@ import { PokeTableComponent } from './components/poke-table/poke-table.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { InfoComponent } from './components/info/info.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokeVisualComponent,
-    PokeTableComponent
+    PokeTableComponent,
+    HeaderComponent,
+    InfoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
