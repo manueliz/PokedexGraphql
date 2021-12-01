@@ -1,5 +1,14 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-       <img src="../../../assets/images/pkIncon.jpg" alt="pokedex" width="80" height="80" (click)="home()">
+      <img src="../../../assets/images/pkIncon.jpg" alt="pokedex" width="80" height="80" (click)="home()">
+      <span>Pokedex</span>
+      <span class="large-spacer"></span>
+      <button mat-icon-button class="login" (click)="login()">
+        <span>Login</span>
+      </button>
+      <span class="little-spacer"></span>
+      <button mat-icon-button class="about" (click)="about()">
+        <span>About</span>
+      </button>
     </mat-toolbar-row>
 </mat-toolbar>

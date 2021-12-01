@@ -16,5 +16,11 @@ export class HeaderComponent implements OnInit {
   home(){
     this.router.navigateByUrl('/home')
   }
+  login(){
+    this.router.navigateByUrl('/login')
+  }
+  about(){
+    this.router.navigateByUrl('/about')
+  }
 
 }
