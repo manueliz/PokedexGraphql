@@ -1,0 +1,33 @@
+@import "../../../assets/style/variables.scss";
+
+.info-card{
+    max-width: 300px;
+    background-color: $white;
+    top: 18%;
+    left: 25%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+  
+  .info-header-image{
+    background-image: url('../../../assets/images/gold.jpg');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+  
+  .inf-card{
+    max-width: 300px;
+    background-color: $white;
+    top: -42%;
+    left: 70%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+  
+  .inf-header-image{
+    background-image: url('../../../assets/images/silver.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
