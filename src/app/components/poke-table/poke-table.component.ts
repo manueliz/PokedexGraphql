@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { PokeApiService } from 'src/app/services/poke-api.service';
+import {MatSort} from '@angular/material/sort';
 
 @Component({
   selector: 'app-poke-table',
@@ -17,6 +18,7 @@ export class PokeTableComponent implements OnInit {
   pokemons = [];
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort!: MatSort;
 
 
   constructor(private pokeService: PokeApiService, private router: Router) { }
@@ -27,8 +29,8 @@ export class PokeTableComponent implements OnInit {
 
   getPokemons() {
     let pokemonData;
-    
-    for (let i = 1; i <= 150; i++) {
+    //i selects all the pokemon data that we will collect
+    for (let i = 1; i <= 251; i++) {
       this.pokeService.getPokemons(i).subscribe(
         res => {
           pokemonData = {
@@ -38,6 +40,7 @@ export class PokeTableComponent implements OnInit {
           };
           this.data.push(pokemonData);
           this.dataSource = new MatTableDataSource<any>(this.data);
+          this.dataSource.sort = this.sort;
           this.dataSource.paginator = this.paginator;
         },
         err => {
@@ -58,6 +61,7 @@ export class PokeTableComponent implements OnInit {
 
   getRow(row: { position: any; }){
     //console.log(row);
+    //
     this.router.navigateByUrl(`/pokeVisual/${row.position}`)
   }
 
